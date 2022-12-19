@@ -1,9 +1,17 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+}
+
 .card {
   position: relative;
-
   background-color: #f7f0f0;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 3px solid #ff1d15;
+  margin: 10px 0;
 }
 
 .card::after {
@@ -33,6 +41,7 @@
   align-items: center;
   font-size: 20px;
   cursor: pointer;
+  border: none;
 }
 
 .image img {
@@ -41,6 +50,7 @@
 
 .footer {
   display: flex;
+  height: 100px;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -49,6 +59,8 @@
 
 .footer h3 {
   color: #fff;
+  text-transform: capitalize;
+  font-weight: 400;
 }
 
 .types {
@@ -59,9 +71,113 @@
 
 .type {
   background-color: #fff;
-  width: 60px;
+  width: 55px;
   text-align: center;
   font-size: 13px;
   padding: 2px 0;
-  border-radius: 3px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.gif {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif img {
+  filter: drop-shadow(5px 5px 2px rgba(17, 17, 17, 0.7));
+}
+
+/* Types */
+
+.grass {
+  background-color: #00241b;
+  color: #fff;
+}
+
+.poison {
+  background-color: #663399;
+  color: #fff;
+}
+
+.fire {
+  background-color: #6F1D1B;
+  color: #fff;
+}
+
+.flying {
+  background-color: #85bdbf;
+  color: #111;
+}
+
+.water {
+  background-color: #3f84e5;
+  color: #fff;
+}
+
+.bug {
+  background-color: #f5b841;
+  color: #fff;
+}
+
+.normal {
+  background-color: #fff;
+  color: #111;
+}
+
+.electric {
+  background-color: #f4ff52;
+  color: #111;
+}
+
+.ground {
+  background-color: #6b2b06;
+  color: #fff;
+}
+
+.fairy {
+  background-color: #f397d6;
+  color: #111;
+}
+
+.fighting {
+  background-color: #57737a;
+  color: #fff;
+}
+
+.psychic {
+  background-color: #f78764;
+  color: #111;
+}
+
+.rock {
+  background-color: #9f9aa4;
+  color: #fff;
+}
+
+.steel {
+  background-color: #3f4045;
+  color: #fff;
+}
+
+.ice {
+  background-color: #73a6ad;
+  color: #fff;
+}
+
+.ghost {
+  background-color: #eeebd3;
+  color: #111;
+}
+
+.dragon {
+  background-color: #540b0e;
+  color: #fff;
+}
+
+.dark {
+  background-color: #111;
+  color: #fff;
 }

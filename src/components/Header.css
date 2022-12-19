@@ -1,0 +1,11 @@
+.header-container {
+  height: 300px;
+  background-color: #ff1d15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container img {
+  filter: drop-shadow(3px 3px 0px #fff);
+}

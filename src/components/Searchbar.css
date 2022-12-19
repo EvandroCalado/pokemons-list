@@ -1,0 +1,17 @@
+.input-contaier {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px;
+  margin-top: 20px;
+}
+
+.input-contaier input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 24px;
+}

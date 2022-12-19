@@ -1,0 +1,33 @@
+.pagination-container {
+  width: 100%;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.pagination {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.pagination-icon button {
+  cursor: pointer;
+}
+
+.pagination-sgv {
+  background-color: #fff;
+  color: #fff;
+  padding: 5px;
+  font-size: 32px;
+  align-self: center;
+}
