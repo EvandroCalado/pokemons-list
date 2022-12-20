@@ -1,7 +1,8 @@
 import React from "react";
+import Favorites from "./Favorites";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({favorite}) => {
   return (
     <div className="header-container">
       <div className="header">
@@ -10,6 +11,7 @@ const Header = () => {
           alt="Pokemon Logo"
         />
       </div>
+      <Favorites favorite={favorite} />
     </div>
   );
 };

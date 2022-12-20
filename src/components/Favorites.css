@@ -21,11 +21,27 @@
 }
 
 .favorites button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 50%;
   background-color: transparent;
   border: none;
   outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  background-color: #fff;
+  position: relative;
+}
+
+.favorite-number {
+  position: absolute;
+  right: -23px;
+  top: -13px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 3px solid #ff1d15;
 }

@@ -24,25 +24,25 @@ const Card = ({ name, gif, img, id, types, favorite, setFavorite }) => {
     <FaHeart className="icon-item" style={{ color: "black" }} />
   );
 
-  return (
-    <div className="wrapper-card">
-      <div className="card">
-        <div className="header">
-          <button className="icon" onClick={favoriteHandle}>
-            {heart}
-          </button>
-          <h2>#{id}</h2>
-        </div>
-        <div className="image">
-          <img src={img} alt={name} />
-          <Link to={`/info/${id}`}>
-            {" "}
-            <AiOutlineInfoCircle className="icon-info" />
-          </Link>
-        </div>
-        <div className="footer">
+  const renderCard = (
+    <div className="card">
+      <div className="header">
+        <button className="icon" onClick={favoriteHandle}>
+          {heart}
+        </button>
+        <h2>#{id}</h2>
+      </div>
+      <div className="image">
+        <img src={img} alt={name} />
+        <Link to={`/info/${id}`}>
+          {" "}
+          <AiOutlineInfoCircle className="icon-info" />
+        </Link>
+      </div>
+      <div className="footer">
+        <h3>{name}</h3>
+        <div className="footer-body">
           <div>
-            <h3>{name}</h3>
             <div className="types">
               {types.map((type, index) => {
                 return (
@@ -82,6 +82,8 @@ const Card = ({ name, gif, img, id, types, favorite, setFavorite }) => {
       </div>
     </div>
   );
+
+  return <div className="wrapper-card">{renderCard}</div>;
 };
 
 export default Card;

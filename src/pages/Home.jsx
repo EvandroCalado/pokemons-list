@@ -5,9 +5,8 @@ import Container from "../components/Container";
 import Pagination from "../components/Pagination";
 import Searchbar from "../components/Searchbar";
 import Header from "../components/Header";
-import Favorites from "../components/Favorites";
 
-const itemsPerPage = 25;
+const itemsPerPage = 151;
 
 const Home = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -16,7 +15,6 @@ const Home = () => {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [favorite, setFavorite] = useState([]);
-
 
   useEffect(() => {
     fetchPokemons(itemsPerPage, itemsPerPage * page)
@@ -36,7 +34,9 @@ const Home = () => {
 
     const results = await Promise.all(promises);
     setPokemonsList(results);
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -56,35 +56,37 @@ const Home = () => {
     setPokemonsList(filteredPokemons);
   };
 
-  const renderCard = loading ? (
-    <div className="loading">Carregando...</div>
-  ) : (
-    pokemonsList.map((pokemon, index) => {
-      const gif =
-        pokemon.sprites.versions["generation-v"]["black-white"].animated
-          .front_default;
-      const img = pokemon.sprites.other["official-artwork"].front_default;
+  const renderCard = pokemonsList.map((pokemon, index) => {
+    const gif = pokemon.sprites.versions["generation-v"]["black-white"].animated
+      .front_default
+      ? pokemon.sprites.versions["generation-v"]["black-white"].animated
+          .front_default
+      : pokemon.sprites.versions["generation-v"]["black-white"].front_default;
 
-      return (
-        <Card
-          key={index}
-          name={pokemon.name}
-          id={pokemon.id}
-          gif={gif}
-          img={img}
-          types={pokemon.types}
-          favorite={favorite}
-          setFavorite={setFavorite}
-        />
-      );
-    })
-  );
+    const img = pokemon.sprites.other["official-artwork"].front_default;
+
+    return loading ? (
+      <div key={index} className="card-loading-container">
+        <div className="card-loading"></div>
+      </div>
+    ) : (
+      <Card
+        key={index}
+        name={pokemon.name}
+        id={pokemon.id}
+        gif={gif}
+        img={img}
+        types={pokemon.types}
+        favorite={favorite}
+        setFavorite={setFavorite}
+      />
+    );
+  });
 
   return (
     <div>
-      <Header />
+      <Header favorite={favorite} />
       <Searchbar searchPokemons={searchPokemons} />
-      <Favorites favorite={favorite} />
       <Pagination page={page} setPage={setPage} totalPages={totalPages} />
       <Container renderCard={renderCard} />
     </div>
