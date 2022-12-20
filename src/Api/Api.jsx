@@ -8,6 +8,11 @@ export const fetchPokemons = async (limit = 649, offset = 0) => {
 };
 
 export const getPokemons = async (url) => {
-  const response = await fetch(url)
-  return response.json()
-}
+  const response = await fetch(url);
+  return response.json();
+};
+
+export const getInfoPokemons = async (id) => {
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+  return response.json();
+};

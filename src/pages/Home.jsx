@@ -17,6 +17,7 @@ const Home = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [favorite, setFavorite] = useState([]);
 
+
   useEffect(() => {
     fetchPokemons(itemsPerPage, itemsPerPage * page)
       .then((response) => {
@@ -83,7 +84,7 @@ const Home = () => {
     <div>
       <Header />
       <Searchbar searchPokemons={searchPokemons} />
-      <Favorites favorite={favorite} setPokemonsList={setPokemonsList} pokemonsList={pokemonsList} />
+      <Favorites favorite={favorite} />
       <Pagination page={page} setPage={setPage} totalPages={totalPages} />
       <Container renderCard={renderCard} />
     </div>

@@ -18,6 +18,8 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .pagination-icon button {
@@ -26,7 +28,7 @@
 
 .pagination-sgv {
   background-color: #fff;
-  color: #fff;
+  color: #222;
   padding: 5px;
   font-size: 32px;
   align-self: center;

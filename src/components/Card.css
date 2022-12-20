@@ -30,7 +30,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5px;
+  margin: 0 5px;
 }
 
 .icon {
@@ -48,9 +48,22 @@
   width: 100%;
 }
 
+.image a {
+ margin-bottom: 0;
+ margin: 5px;
+}
+
+.icon-info {
+  font-size: 28px;
+}
+
+.icon-info:hover {
+  color: #ff1d15;
+}
+
 .footer {
   display: flex;
-  height: 100px;
+  height: 80px;
   justify-content: space-between;
   align-items: center;
   padding: 10px;

@@ -1,5 +1,7 @@
 import "./Card.css";
 import { FaHeart } from "react-icons/fa";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Card = ({ name, gif, img, id, types, favorite, setFavorite }) => {
   const favoriteHandle = () => {
@@ -33,6 +35,10 @@ const Card = ({ name, gif, img, id, types, favorite, setFavorite }) => {
         </div>
         <div className="image">
           <img src={img} alt={name} />
+          <Link to={`/info/${id}`}>
+            {" "}
+            <AiOutlineInfoCircle className="icon-info" />
+          </Link>
         </div>
         <div className="footer">
           <div>

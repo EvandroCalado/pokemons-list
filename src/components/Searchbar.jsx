@@ -6,7 +6,7 @@ const Searchbar = ({ searchPokemons }) => {
     <div className="input-contaier">
       <input
         onChange={(e) => searchPokemons(e.target.value)}
-        placeholder="Busque pokemon..."
+        placeholder="Busca por pokemon..."
       />
     </div>
   );

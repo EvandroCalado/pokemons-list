@@ -1,5 +1,5 @@
 import React from "react";
-import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./Pagination.css";
 
 const Pagination = ({ page, setPage, totalPages }) => {
@@ -21,11 +21,11 @@ const Pagination = ({ page, setPage, totalPages }) => {
         <h2>Pokemons</h2>
         <div className="pagination-icon">
           <button onClick={previousClickHandle}>
-            <GrCaretPrevious className="pagination-sgv" />
+            <FaChevronLeft className="pagination-sgv" />
           </button>
           <p>{`${page + 1} de ${totalPages}`}</p>
           <button onClick={nextClickHandle}>
-            <GrCaretNext className="pagination-sgv" />
+            <FaChevronRight className="pagination-sgv" />
           </button>
         </div>
       </div>
