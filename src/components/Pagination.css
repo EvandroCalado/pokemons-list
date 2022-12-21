@@ -13,6 +13,10 @@
   align-items: center;
 }
 
+.pagination img {
+  width: 200px;
+}
+
 .pagination-icon {
   display: flex;
   align-items: center;
@@ -22,14 +26,10 @@
   overflow: hidden;
 }
 
-.pagination-icon button {
-  cursor: pointer;
-}
-
 .pagination-sgv {
-  background-color: #fff;
-  color: #222;
+  color: #fff;
   padding: 5px;
-  font-size: 32px;
+  font-size: 40px;
   align-self: center;
+  cursor: pointer;
 }

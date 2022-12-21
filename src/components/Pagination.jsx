@@ -1,5 +1,6 @@
 import React from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { fetchPokemons } from "../Api/Api";
 import "./Pagination.css";
 
 const Pagination = ({ page, setPage, totalPages }) => {
@@ -18,15 +19,20 @@ const Pagination = ({ page, setPage, totalPages }) => {
   return (
     <div className="pagination-container">
       <div className="pagination">
-        <h2>Pokemons</h2>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+          alt="Pokemon Logo"
+        />
         <div className="pagination-icon">
-          <button onClick={previousClickHandle}>
-            <FaChevronLeft className="pagination-sgv" />
-          </button>
+          <FaChevronLeft
+            onClick={previousClickHandle}
+            className="pagination-sgv"
+          />
           <p>{`${page + 1} de ${totalPages}`}</p>
-          <button onClick={nextClickHandle}>
-            <FaChevronRight className="pagination-sgv" />
-          </button>
+          <FaChevronRight
+            onClick={nextClickHandle}
+            className="pagination-sgv"
+          />
         </div>
       </div>
     </div>
